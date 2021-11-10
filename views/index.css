@@ -1,16 +1,5 @@
-doctype html
-| PASTE YOUR HTML CODE HERE
-head
-  meta(charset='utf-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  title CodeQueen LMS signup
-  meta(name='description' content='')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  link(rel='stylesheet', href='index.css')
-
-style.
- body{
-    background-image: url("/images/logo.png");  
+body{
+      
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -92,20 +81,4 @@ style.
       height: 100px; 
        
     }
-.header
-  img#logoArea(src='./Images/logo.png')
-  span#titleArea LEARNING MANAGENMENT SYSTEM.
-  .background(style="background-image: url('bg.jpg');")
-    .card-body
-      form(method='POST' action='/signUp' name='signUpForm')
-        .transbox
-          #signInLabel Sign in
-          div
-            input#username(type='text' name='username' placeholder='Username')
-            p.username_info.warnP  
-          div
-            input#password1(type='password' name='password' autocomplete='off' placeholder='Password')
-            p.password1_info.warnP
-          #submitDiv
-            input#submit.button(type='submit' value='Sign in')
-    script(src='/javascript/signUpVal.js')
+    

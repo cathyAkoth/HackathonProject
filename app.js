@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const { PORT } = process.env || 5000 
 const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 
-const loginRoutes = require("./routes/loginRoute")
+const lndexRoutes = require("./routes/lndexRoute")
 
 
 
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({extended: true }))
 
 
 
-app.use('/login', loginRoutes);
+app.use('/Index', lndexRoutes);
 
 
 
