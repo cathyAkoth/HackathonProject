@@ -10,7 +10,7 @@ const { PORT } = process.env || 5000
 const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 
 const lndexRoutes = require("./routes/lndexRoute")
-
+const studentFormRoutes = require("./routes/studentFormRoute")
 
 
 
@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({extended: true }))
 
 
 app.use('/Index', lndexRoutes);
+app.use('/',studentFormRoutes);
 
 
 
