@@ -18,3 +18,42 @@ li{
 h1,h2{
     color:orange;
 }
+
+.side-menu{
+    position:fixed;
+    background:rgb(22, 21, 21);
+    width:20vw;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+.side-menu .brand-name{
+    height:10vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.side-menu li{
+    font-size:24px;
+    padding:10px 40px;
+    color:orange;
+    display:flex;
+    align-items:center;
+}
+.side-menu li:hover{
+    background:orange;
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
