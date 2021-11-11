@@ -4,7 +4,7 @@ const SignUp = require('../models/SignUp')
 
 // Specify what to do when user hits the '/' route/endpoint
 router.get('/signUp', (req, res) => {
-    res.render('signUp')
+    res.render('signup')
 })
 
 router.post('/signUp', async(req, res) => {
@@ -19,7 +19,7 @@ router.post('/signUp', async(req, res) => {
                
               }
               
-            res.redirect('/login')
+            res.redirect('/')
         })
     }
     catch (err) {
