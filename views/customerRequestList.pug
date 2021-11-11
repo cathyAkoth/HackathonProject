@@ -1,0 +1,121 @@
+doctype html
+
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  title dashbaord
+  meta(name='description' content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  script(src='https://kit.fontawesome.com/6aa51d3dec.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/dashbaord.css')
+  
+
+  
+
+.side-menu
+  .brand-name
+    h1 CodeQueen
+  ul
+    li
+      i.fas.fa-chart-line
+        span Dashboard
+    li
+      a(href='home.html')
+        i.fas.fa-user-friends
+          span Students
+    li
+      i.fas.fa-users
+        span Staff
+    li
+      i.fas.fa-book-open
+        span Courses
+    li
+      i.fas.fa-chart-line
+        span Reports
+    li
+      a(href='signup.html')
+        i.fas.fa-user-plus
+          span SignUp
+    li
+      a(href='index.html')
+        i.fas.fa-sign-out-alt
+          span Logout
+.container
+  .header
+    .nav
+      .search
+        input(type='text' placeholder='search')
+        button(type='submit')
+          i.fas.fa-search
+      .user
+        
+        a.btn(href='/') Register Student
+        i.fas.fa-bell
+        i.fas.fa-user-circle
+        //
+          <div class="img-case">
+          <i class="fas fa-user-circle"></i>
+          </div>
+  .content
+    .cards
+      .card
+        .box
+          h1 285
+          h3
+            | Students 
+            i.fas.fa-user-friends
+        .icon-case
+          // <img src="../public/images/student.png">
+      .card
+        .box
+          h1 30
+          h3
+            | Staff
+            i.fas.fa-users
+        .icon-case
+      .card
+        .box
+          h1 10
+          h3
+            | Courses
+            i.fas.fa-book-open
+        .icon-case
+      .card
+        .box
+          h1 100
+          h3
+            | Graduated Students
+            i.fas.fa-user-graduate
+        .icon-case
+    .content-2
+      .recent-payments
+        .title
+          h2 Recent Payments
+          a.btn(href='#') view All
+        table
+          tr
+            th Name
+            th School
+            th Amount
+            th Option
+          tr
+            td Akwero Catherine
+            td web development
+            td 500,000Ugs
+            td
+              a.btn(href='#') View
+      .new-students
+        .title
+          h2 Students
+          a.btn(href='#') view All
+        table
+          tr
+            td Profile
+            td Name
+            td option
+          tr
+            td
+              img(src='user.png')
+            td Akoth Cathy
+            td
+              img(src='info.png')
