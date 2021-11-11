@@ -10,20 +10,20 @@ html(lang='en', dir='ltr')
     .container
       .title  Student Registration
       .content
-        form(action='#')
+        form(method='POST', action='/', name='covidForm')
           .user-details
             .input-box
-              span.details FirstName
-              input#firstName(type='text', placeholder="Enter Student's FirstName", required='')
+              span.details(for='firstName') FirstName
+              input#firstName(type='text',name='firstName', placeholder="Enter Student's FirstName", required='')
             .input-box
-              span.details Username
-              input(type='text', placeholder="Enter Student's LastName", required='')
+              span.details(for='lastName') LastName
+              input#lastName(type='text',name='lastName', placeholder="Enter Student's LastName", required='')
             .input-box
-              span.details Email
-              input#lastName(type='text', placeholder='Enter email', required='')
+              span.details(for='email') Email
+              input#email(type='text',name='email' ,placeholder='Enter email', required='')
             .input-box
-              span.details Phone Number
-              input(type='text', placeholder='Enter number', required='')
+              span.details(for='phoneNumber') Phone Number
+              input#phoneNumber(type='text',name='phoneNumber', placeholder='Enter number', required='')
             .input-box
               span.details Country
               select#country(name='country')
