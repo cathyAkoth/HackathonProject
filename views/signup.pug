@@ -1,0 +1,25 @@
+doctype html
+| PASTE YOUR HTML CODE HERE
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./CSS/signup.css')
+.wrapper
+  h2 User signUp
+  form(action='/' method='post' name='signup')
+    .input-box(for='username')
+      input#username(type='text' name='username' placeholder='Enter username' required='')
+      p.username_info.warnP
+    .input-box(for='password')
+      input#password(type='password' name='password' placeholder='Enter email' required='')
+      p.password_info.warnP
+    .policy(for='policy')
+      input#policy(type='checkbox'name='policy')
+      p.policy_info.warnP
+      h3 I accept all terms &amp; condition
+    .input-box.button
+      input(type='Submit' value='Sign Up')
+    .text
+      h3
+        | Already have an account? 
+        a(href='index.pug') Login now
