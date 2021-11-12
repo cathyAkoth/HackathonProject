@@ -20,7 +20,7 @@ head
       i.fas.fa-chart-line
         span Dashboard
     li
-      a(href='home.html')
+      a(href='/truck')
         i.fas.fa-user-friends
           span Students
     li
@@ -90,20 +90,23 @@ head
     .content-2
       .recent-payments
         .title
-          h2 Recent Payments
+          h2 students
           a.btn(href='#') view All
         table
           tr
-            th Name
-            th School
-            th Amount
-            th Option
-          tr
-            td Akwero Catherine
-            td web development
-            td 500,000Ugs
-            td
-              a.btn(href='#') View
+            th Student Name
+            th email
+            th course
+            th status
+            
+            if users.length
+              each user in users
+                tr
+                  td #{user.lastName +' '+ user.firstName}
+                  td web development
+                  td 500,000Ugs
+                  td
+                a.btn(href='#') View
       .new-students
         .title
           h2 Students

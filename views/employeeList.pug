@@ -1,0 +1,96 @@
+extends layout
+block content
+    
+    title Employee list
+    link(rel='stylesheet', href='/css/pugList.css')
+
+
+      
+
+
+    body
+
+
+        
+        .main-content
+          header
+            h2
+              .header-title
+                label(for='')
+                 
+                |                 STAY CLEAN
+            |                 
+            
+        
+        .recent-grid
+          .Projects
+            .card
+              .card-header
+
+                a.btn.btn-warning(href='/request', role='button') 
+                  span.las.la-arrow-left
+                   |  
+                
+                h3 Employee list.
+                |                         
+                
+                  
+                form.example(action='/employee')
+                  input(type='text', placeholder='Search..', name='role')
+                  |   
+                  button(type='submit')
+                    i.fa.fa-search
+                            
+
+                a.btn.btn-warning(href='/employee/employeeReg', role='button') 
+                  
+                
+                  span.las.la-user 
+                    |
+                   
+                
+
+              .card-body
+
+              table
+              table.table.table-hover
+                thead
+                        
+                
+          
+                  tr
+                      
+                        th Full Name 
+                        th Email 
+                        th Country
+                        th role
+                        th Date of birth                       
+                        th Phone Number 
+                        th 
+                        th
+
+                      
+                
+                tbody
+                  if users.length
+                  each user in users
+                      tr
+                          
+                            td #{user.lastName +' '+ user.firstName}
+                            td #{user.email}
+                            td #{user.country}
+                            td #{user.role}
+                            td #{user.date}
+                            td #{user.telephoneNo}
+                            
+                            td
+                               a(href='/employee/update/'+user._id) 
+                                span.icon 
+                                  i.las.la-edit 
+                            td
+                               form(method="post" action='/employee/delete')
+                                    input(type="hidden", placeholder="", name="id", value=user._id)
+                                    button.btn.btn-success.btn-block(type="submit") Delete
+
+          
+                        

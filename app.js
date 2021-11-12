@@ -18,8 +18,10 @@ const { WELCOME_MESSAGE, DATABASE_URL } = process.env
 
 const SignUp = require('./models/SignUp')
 const signUpRoutes = require("./routes/signUpRoute")
-const lndexRoutes = require("./routes/lndexRoute")
 const studentFormRoutes = require("./routes/studentFormRoute")
+const lndexRoutes = require("./routes/lndexRoute")
+const employeeRoutes = require("./routes/employeeRoute")
+
 const loginRoutes = require("./routes/loginRoute")
 const customerRoutes = require("./routes/customerReqRoute")
 
@@ -46,10 +48,12 @@ passport.deserializeUser(SignUp.deserializeUser());
 
 
 app.use('/Index', lndexRoutes);
-app.use('/',studentFormRoutes);
+
 app.use('/request', customerRoutes);
 app.use('/', signUpRoutes);
+app.use('/',studentFormRoutes);
 app.use('/login', loginRoutes);
+app.use('/employee', employeeRoutes);
 
 
 

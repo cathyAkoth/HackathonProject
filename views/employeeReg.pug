@@ -1,0 +1,51 @@
+doctype html
+// Created By CodingLab - www.codinglabweb.com
+html(lang='en', dir='ltr')
+  head
+    meta(charset='UTF-8')
+    // -<title> Responsive Registration Form | CodingLab </title>-
+    link(rel='stylesheet', href='../public/css/studentForm.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  body
+    .container
+      .title  Student Registration
+      .content
+        form(method='POST', action='/', name='covidForm')
+          .user-details
+            .input-box
+              span.details(for='firstName') FirstName
+              input#firstName(type='text',name='firstName', placeholder="Enter Student's FirstName", required='')
+            .input-box
+              span.details(for='lastName') LastName
+              input#lastName(type='text',name='lastName', placeholder="Enter Student's LastName", required='')
+            .input-box
+              span.details(for='email') Email
+              input#email(type='text',name='email' ,placeholder='Enter email', required='')
+            .input-box
+              span.details(for='phoneNumber') Phone Number
+              input#phoneNumber(type='text',name='phoneNumber', placeholder='Enter number', required='')
+            .input-box
+              span.details Country
+              select#country(name='country')
+                option(value='') Choose Country
+                option(value='Uganda') Uganda
+                option(value='Kenya') Kenya
+                option(value='Tanzania') Tanzania
+            .input-box
+              span.details Course
+              select#course(name='course')
+                option(value='') Select Course
+                option(value='Web Development') Web Development
+                option(value='Software Fundamentals')
+                  | Software Fundamentals/option&gt;
+                option(value='UI/UX') UI/UX
+            .input-box
+              span.details Status
+              select#status(name='status')
+                option(value='') educatin status
+                option(value='completed') completed
+                option(value='retake') retake
+                option(value='graduated') graduated
+                option(value='inprogress') Inprogress
+          .button
+            input(type='submit', value='Register')
